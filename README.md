@@ -11,5 +11,5 @@ docker-compose \
 --env-file .env.development \
 -f docker-compose.yml \
 -f docker-compose.dev.yml \
-up
+up --build
 ```
