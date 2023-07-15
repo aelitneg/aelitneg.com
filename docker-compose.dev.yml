@@ -1,5 +1,19 @@
 version: "3"
 services:
+  frontend:
+    container_name:  frontend
+    build:
+      context: ./frontend
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./frontend/.next:/app/.next
+      - ./frontend/src:/app/src
+      - ./frontend/public:/app/public
+      - ./frontend/.env.development:/app/.env.development
+    ports:
+      - '3000:3000'
+    networks:
+      - strapi
   strapi:
     build:
       context: ./strapi
