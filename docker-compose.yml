@@ -1,0 +1,31 @@
+version: "3"
+services:
+  strapi:
+    container_name: strapi
+    build:
+      context: ./strapi
+      dockerfile: ./Dockerfile.prod
+    restart: unless-stopped
+    env_file: .env.production
+    environment:
+      DATABASE_CLIENT: ${DATABASE_CLIENT}
+      DATABASE_HOST: ${DATABASE_HOST}
+      DATABASE_PORT: ${DATABASE_PORT}
+      DATABASE_NAME: ${DATABASE_NAME}
+      DATABASE_USERNAME: ${DATABASE_USERNAME}
+      DATABASE_PASSWORD: ${DATABASE_PASSWORD}
+      JWT_SECRET: ${JWT_SECRET}
+      ADMIN_JWT_SECRET: ${ADMIN_JWT_SECRET}
+      APP_KEYS: ${APP_KEYS}
+      NODE_ENV: ${NODE_ENV}
+    volumes:
+      - ./strapi/config:/opt/app/config
+      - ./strapi/src:/opt/app/src
+      - ./strapi/package.json:/opt/package.json
+      - ./strapi/yarn.lock:/opt/yarn.lock
+      - .env.production:/opt/app/.env
+      - ./strapi/public/uploads:/opt/app/public/uploads
+    ports:
+      - "1337:1337"
+    networks:
+      - strapi
