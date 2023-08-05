@@ -6,10 +6,10 @@ services:
       context: ./frontend
       dockerfile: ./Dockerfile
     volumes:
+      - ./frontend/.env.local:/app/.env.local
       - ./frontend/.next:/app/.next
       - ./frontend/src:/app/src
       - ./frontend/public:/app/public
-      - ./frontend/.env.development:/app/.env.development
     ports:
       - '3000:3000'
     networks:
