@@ -17,13 +17,6 @@ services:
       DATABASE_PASSWORD: ${DATABASE_PASSWORD}
       AWS_REGION: eu-west-1
       BUCKET_STRAPI: com.aelitneg.strapi
-    volumes:
-      - ./strapi/config:/opt/app/config
-      - ./strapi/src:/opt/app/src
-      - ./strapi/package.json:/opt/package.json
-      - ./strapi/yarn.lock:/opt/yarn.lock
-      - .env.production:/opt/app/.env
-      - ./strapi/public/uploads:/opt/app/public/uploads
     ports:
       - "1337:1337"
     networks:
