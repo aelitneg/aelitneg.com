@@ -19,5 +19,3 @@ services:
       BUCKET_STRAPI: com.aelitneg.strapi
     ports:
       - "1337:1337"
-    networks:
-      - strapi
