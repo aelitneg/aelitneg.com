@@ -13,7 +13,7 @@ module.exports = [
             'blob:',
             'minio',
             'localhost:9000',
-            'yourBucketName.s3.yourRegion.amazonaws.com',
+            process.env.S3_BUCKET
           ],
           'media-src': [
             "'self'",
@@ -21,7 +21,7 @@ module.exports = [
             'blob:',
             'minio',
             'localhost:9000',
-            'yourBucketName.s3.yourRegion.amazonaws.com',
+            process.env.S3_BUCKET
           ],
           upgradeInsecureRequests: null,
         },
