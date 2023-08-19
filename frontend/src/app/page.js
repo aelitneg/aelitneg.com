@@ -5,7 +5,6 @@ import { fetchAPI } from './utils/fetch-api';
 
 export default async function Home() {
   const articles = await fetchAPI('/articles');
-  console.log(articles[0])
   return (
     <main className={styles.main}>
       <h1>aelitneg.com</h1>
