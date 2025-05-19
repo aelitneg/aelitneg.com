@@ -1,0 +1,117 @@
+/**
+ * Display
+ */
+.block {
+  display: block;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.h-full {
+  height: 100%;
+}
+
+/**
+ * Flexbox
+ */
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.gap-2 {
+  gap: 2rem;
+}
+
+/**
+ * Font Size
+ */
+.font-md {
+  font-size: 1.15rem;
+}
+
+.font-lg {
+  font-size: 1.75rem;
+}
+
+/**
+ * Width
+ */
+.w-full {
+  width: 100%;
+}
+
+.min-width-200 {
+  min-width: 200px;
+}
+
+.max-width-2xl {
+  max-width: 42rem;
+}
+
+/**
+ * Margin
+ */
+.m-0 {
+  margin: 0;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+/**
+ * Padding
+ */
+.p-1 {
+  padding: 1rem;
+}
+
+/**
+ * Text
+ */
+.text-center {
+  text-align: center;
+}
+
+.no-underline {
+  text-decoration: none;
+}
+
+/**
+ * Medium Screens
+ */
+@media (min-width: 40rem) {
+  .sm\:flex-row {
+    flex-direction: row;
+  }
+
+  .sm\:mb-0 {
+    margin-bottom: 0;
+  }
+
+  .sm\:text-left {
+    text-align: left;
+  }
+}

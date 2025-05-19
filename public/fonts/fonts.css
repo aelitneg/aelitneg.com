@@ -1,0 +1,113 @@
+/* Atkinson Hyperlegible Next Font Family */
+
+/* Regular */
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('AtkinsonHyperlegibleNext-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Regular Italic */
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('AtkinsonHyperlegibleNext-RegularItalic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Extra Light */
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('AtkinsonHyperlegibleNext-ExtraLight.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+}
+
+/* Extra Light Italic */
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('AtkinsonHyperlegibleNext-ExtraLightItalic.woff2') format('woff2');
+  font-weight: 200;
+  font-style: italic;
+}
+
+/* Light */
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('AtkinsonHyperlegibleNext-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* Light Italic */
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('AtkinsonHyperlegibleNext-LightItalic.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* Medium */
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('AtkinsonHyperlegibleNext-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Medium Italic */
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('AtkinsonHyperlegibleNext-MediumItalic.woff2') format('woff2');
+  font-weight: 500;
+  font-style: italic;
+}
+
+/* Semi Bold */
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('AtkinsonHyperlegibleNext-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* Semi Bold Italic */
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('AtkinsonHyperlegibleNext-SemiBoldItalic.woff2') format('woff2');
+  font-weight: 600;
+  font-style: italic;
+}
+
+/* Bold */
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('AtkinsonHyperlegibleNext-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Bold Italic */
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('AtkinsonHyperlegibleNext-BoldItalic.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Extra Bold */
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('AtkinsonHyperlegibleNext-ExtraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* Extra Bold Italic */
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('AtkinsonHyperlegibleNext-ExtraBoldItalic.woff2') format('woff2');
+  font-weight: 800;
+  font-style: italic;
+}
