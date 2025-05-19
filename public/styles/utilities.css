@@ -1,16 +1,9 @@
 /**
  * Display
  */
-.block {
-  display: block;
-}
 
 .inline-flex {
   display: inline-flex;
-}
-
-.h-full {
-  height: 100%;
 }
 
 /**
@@ -62,12 +55,20 @@
   width: 100%;
 }
 
-.min-width-200 {
-  min-width: 200px;
+.max-w-full {
+  max-width: 100%;
 }
 
 .max-width-2xl {
   max-width: 42rem;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.object-contain {
+  object-fit: contain;
 }
 
 /**
@@ -100,7 +101,7 @@
 }
 
 /**
- * Medium Screens
+ * Small screen breakpoint
  */
 @media (min-width: 40rem) {
   .sm\:flex-row {
@@ -109,6 +110,10 @@
 
   .sm\:mb-0 {
     margin-bottom: 0;
+  }
+
+  .sm\:max-w-1\/2 {
+    max-width: 50%;
   }
 
   .sm\:text-left {
