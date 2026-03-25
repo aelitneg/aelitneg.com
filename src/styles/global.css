@@ -1,0 +1,40 @@
+:root {
+  --transition-duration: 250ms;
+
+  /* Light Theme */
+  --background-color-light: white;
+  --color-light: black;
+
+  /* Dark Theme */
+  --background-color-dark: black;
+  --color-dark: white;
+}
+
+body {
+  font-family: var(--font-atkinson);
+  background-color: var(--background-color-light);
+  color: var(--color-light);
+
+  transition-property: all;
+  transition-duration: var(--transition-duration);
+}
+
+.dark body {
+  background-color: var(--background-color-dark);
+  color: var(--color-dark);
+}
+
+header {
+  display: flex;
+  align-items: flex-start;
+  padding: 0.5rem;
+}
+
+.logo {
+  flex: 1;
+}
+
+.logo h1,
+.logo p {
+  margin: 0;
+}

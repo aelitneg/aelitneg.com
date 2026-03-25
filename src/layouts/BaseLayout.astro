@@ -1,0 +1,21 @@
+---
+import { Font } from 'astro:assets';
+import Header from '../components/Header.astro';
+import '../styles/global.css';
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!-- TODO: Create favicon -->
+    <!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
+    <!-- <link rel="icon" href="/favicon.ico" /> -->
+    <meta name="viewport" content="width=device-width" />
+    <Font cssVariable="--font-atkinson" />
+    <title>aelitneg</title>
+  </head>
+  <body>
+    <Header />
+    <slot />
+  </body>
+</html>
