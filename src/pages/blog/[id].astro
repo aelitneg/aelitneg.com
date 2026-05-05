@@ -1,0 +1,85 @@
+---
+import { Image } from 'astro:assets';
+import { getCollection, getEntry, render } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+
+  return posts.map(({ id }) => ({ params: { id } }));
+}
+
+const { id } = Astro.params;
+
+const post = await getEntry('blog', id);
+if (!post) return Astro.redirect('/404');
+
+const { Content } = await render(post);
+---
+
+<BaseLayout>
+  <article>
+    {
+      post.data.image && (
+        <figure>
+          <a
+            href={post.data.image.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`${post.data.image.ariaLabel} (opens in new tab)`}
+          >
+            <Image
+              src={post.data.image.url}
+              alt={post.data.image.alt}
+              height={400}
+              layout="constrained"
+            />
+          </a>
+          <figcaption set:html={post.data.image.caption} />
+        </figure>
+      )
+    }
+    <div class="article-title">
+      <h1>{post.data.title}</h1>
+      <p>Published {post.data.pubDate.toLocaleDateString()}</p>
+    </div>
+    <Content />
+  </article>
+</BaseLayout>
+
+<style>
+  article {
+    max-width: 65ch;
+    margin-inline: auto;
+    padding-inline: 1rem;
+  }
+
+  article h1,
+  article figure {
+    text-align: center;
+  }
+
+  article figure img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  article figcaption {
+    font-size: var(--font-size-sm);
+  }
+
+  .article-title {
+    margin: 3rem 0;
+    text-align: center;
+  }
+
+  .article-title h1 {
+    margin: 0;
+  }
+
+  .article-title p {
+    margin: 0;
+    font-size: var(--font-size-sm);
+    font-style: italic;
+  }
+</style>

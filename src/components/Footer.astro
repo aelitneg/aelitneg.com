@@ -1,0 +1,85 @@
+---
+import Bluesky from '@/assets/icons/bluesky.svg';
+import Codeberg from '@/assets/icons/codeberg.svg';
+import GitHub from '@/assets/icons/github.svg';
+import LinkedIn from '@/assets/icons/linkedin.svg';
+
+const date = new Date().getFullYear();
+---
+
+<footer>
+  <div class="socials">
+    <a
+      href="https://codeberg.org/aelitneg"
+      aria-label="aelitneg on Codeberg (opens in new tab)"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Codeberg />
+    </a>
+    <a
+      href="https://github.com/aelitneg"
+      aria-label="aelitneg on GitHub (opens in new tab)"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <GitHub />
+    </a>
+    <a
+      href="https://www.linkedin.com/in/aelitneg"
+      aria-label="aelitneg on LinkedIn (opens in new tab)"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <LinkedIn />
+    </a>
+    <a
+      href="https://bsky.app/profile/aelitneg.bsky.social"
+      aria-label="aelitneg on Bluesky (opens in new tab)"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Bluesky />
+    </a>
+  </div>
+  <p>
+    © {date} Andrew Gentile. NON-AI-CC0
+    <br />
+    Made in 🏴󠁧󠁢󠁳󠁣󠁴󠁿
+  </p>
+</footer>
+
+<style>
+  footer {
+    font-size: var(--font-size-sm);
+    text-align: center;
+    margin: 1rem 0;
+    padding: 0.5rem;
+  }
+
+  .socials {
+    color: var(--color-light);
+    transition-property: color;
+    transition-duration: var(--transition-duration);
+  }
+
+  :global(.dark) .socials {
+    color: var(--color-dark);
+  }
+
+  .socials a,
+  .socials a:visited {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .socials svg {
+    padding: 0 0.25rem;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .license {
+    font-size: 0.7rem;
+  }
+</style>

@@ -1,7 +1,8 @@
 ---
 import { Font } from 'astro:assets';
-import Header from '../components/Header.astro';
-import '../styles/global.css';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import '@/styles/global.css';
 ---
 
 <html lang="en">
@@ -11,11 +12,39 @@ import '../styles/global.css';
     <!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
     <!-- <link rel="icon" href="/favicon.ico" /> -->
     <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Andrew Gentile - Software Engineer">
+    <script is:inline>
+      /**
+       * Theme Preference
+       *
+       * LocalStorage preferred over CSS media.
+       * Preference only saved on affirmative user action.
+       * This runs in the <head> to prevent flicker of unstyled content.
+       */
+      const theme = (() => {
+        const localStorageTheme = localStorage?.getItem('theme') ?? '';
+        if (['dark', 'light'].includes(localStorageTheme)) {
+          return localStorageTheme;
+        }
+
+        return window.matchMedia('(prefers-color-scheme: dark)').matches
+          ? 'dark'
+          : 'light';
+      })();
+
+      theme === 'light'
+        ? document.documentElement.classList.remove('dark')
+        : document.documentElement.classList.add('dark');
+    </script>
+
     <Font cssVariable="--font-atkinson" />
     <title>aelitneg</title>
   </head>
   <body>
     <Header />
-    <slot />
+    <main>
+      <slot />
+    </main>
+    <Footer />
   </body>
 </html>

@@ -1,7 +1,45 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PostList from '@/components/PostList.astro';
+import andrew from '@/assets/images/andrew.webp';
 ---
 
 <BaseLayout>
-  
+  <div class="hero">
+    <Image class="hero-image" src={andrew} alt="andrew" />
+    <div class="hero-text">
+      <h1>Engineering for Creators</h1>
+      <p>
+        I'm a software engineer building tools for people working in music,
+        tech, and creative spaces. I work across audio, web, and infrastructure
+        to solve technical problems and improve the way creative work gets done.
+      </p>
+    </div>
+  </div>
+  <h2>blog</h2>
+  <PostList />
 </BaseLayout>
+
+<style>
+  .hero {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-image {
+    flex: 0 0 30%;
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+</style>

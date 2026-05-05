@@ -8,9 +8,17 @@
   /* Dark Theme */
   --background-color-dark: black;
   --color-dark: white;
+
+  --border-color: gray;
+  --font-size-sm: 0.85rem;
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+
   font-family: var(--font-atkinson);
   background-color: var(--background-color-light);
   color: var(--color-light);
@@ -24,17 +32,14 @@ body {
   color: var(--color-dark);
 }
 
-header {
-  display: flex;
-  align-items: flex-start;
+main {
+  flex: 1;
   padding: 0.5rem;
 }
 
-.logo {
-  flex: 1;
-}
-
-.logo h1,
-.logo p {
-  margin: 0;
+@media (min-width: 768px) {
+  main {
+    width: 60%;
+    margin-inline: auto;
+  }
 }
