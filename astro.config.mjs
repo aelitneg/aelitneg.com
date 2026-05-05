@@ -3,6 +3,10 @@ import { defineConfig, fontProviders } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
+  site:
+    process.env.NODE_ENV === 'production'
+      ? 'https://aelitneg.com'
+      : 'http://localhost:4321',
   fonts: [
     {
       provider: fontProviders.local(),

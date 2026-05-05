@@ -17,6 +17,9 @@ const blog = defineCollection({
           link: z.url(),
         })
         .optional(),
+      audio: z.object({
+        length: z.number().int(),
+      }),
     }),
 });
 
