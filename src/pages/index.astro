@@ -1,8 +1,11 @@
 ---
 import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import PostList from '@/components/PostList.astro';
 import andrew from '@/assets/images/andrew.webp';
+
+const posts = await getCollection('blog');
 ---
 
 <BaseLayout>
@@ -17,8 +20,11 @@ import andrew from '@/assets/images/andrew.webp';
       </p>
     </div>
   </div>
-  <h2>blog</h2>
-  <PostList />
+  {posts.length > 0 && (
+    <h2>blog</h2> 
+    <PostList />
+  )}
+  
 </BaseLayout>
 
 <style>
