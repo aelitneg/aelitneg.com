@@ -9,25 +9,31 @@ const posts = await getCollection('blog');
 ---
 
 <BaseLayout>
-  <div class="hero">
-    <Image class="hero-image" src={andrew} alt="andrew" />
-    <div class="hero-text">
-      <h1>Engineering for Creators</h1>
-      <p>
-        I'm a software engineer building tools for people working in music,
-        tech, and creative spaces. I work across audio, web, and infrastructure
-        to solve technical problems and improve the way creative work gets done.
-      </p>
+  <div class="content">
+    <div class="hero">
+      <Image class="hero-image" src={andrew} alt="andrew" />
+      <div class="hero-text">
+        <h1>Engineering for Creators</h1>
+        <p>
+          I'm a software engineer building tools for people working in music,
+          tech, and creative spaces. I work across audio, web, and infrastructure
+          to solve technical problems and improve the way creative work gets done.
+        </p>
+      </div>
     </div>
+    {posts.length > 0 && (
+      <h2>blog</h2> 
+      <PostList />
+    )}
   </div>
-  {posts.length > 0 && (
-    <h2>blog</h2> 
-    <PostList />
-  )}
-  
 </BaseLayout>
 
 <style>
+  .content {
+    max-width: 760px;
+    margin-inline: auto;
+  }
+
   .hero {
     display: flex;
     align-items: center;
