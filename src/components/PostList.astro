@@ -10,12 +10,12 @@ const posts = await getCollection('blog');
     posts.map((post) => {
       const date = new Date(post.data.pubDate);
       return (
-        <a href={`/blog/${post.id}`}>
-          <li>
+        <li>
+          <a href={`/blog/${post.id}`}>
             {date.toLocaleDateString()}&nbsp;-&nbsp;{post.data.title}
-            <ArrowRight class="icon" aria-hidden="true"/>
-          </li>
-        </a>
+            <ArrowRight class="icon" aria-hidden="true" />
+          </a>
+        </li>
       );
     })
   }
@@ -30,7 +30,7 @@ const posts = await getCollection('blog');
     text-decoration: none;
     color: unset;
   }
-  
+
   svg {
     width: 1em;
     height: 1em;
