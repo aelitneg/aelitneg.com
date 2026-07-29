@@ -2,9 +2,18 @@
 
 ## Deployment
 
-This site is publicly hosted on Cloudflare.
+This site is publicly hosted on Cloudflare and deployed automatically on push to `main`. 
+
+A manual build and deploy can be done using `astro` and `wrangler`.
+
+```sh
+pnpm astro build
+pnpm wrangler deploy
+```
 
 ## Accessibility
+
+Tips for better accessibility:
 
 - Use `aria-label` to describe the destination of links.
 - Use `alt` to describe the content of images.
