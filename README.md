@@ -2,7 +2,7 @@
 
 ## Deployment
 
-This site is publicly hosted on Cloudflare and deployed automatically on push to `main`. 
+This site is publicly hosted on Cloudflare and deployed automatically on push to `main`.
 
 A manual build and deploy can be done using `astro` and `wrangler`.
 

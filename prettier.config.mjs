@@ -3,13 +3,17 @@
  * @type {import("prettier").Config}
  */
 const config = {
-  plugins: ['prettier-plugin-astro'],
+  plugins: ['prettier-plugin-astro', '@prettier/plugin-xml'],
   overrides: [
     {
       files: '*.astro',
       options: {
         parser: 'astro',
       },
+    },
+    {
+      files: '*.svg',
+      options: { parser: 'xml' },
     },
   ],
   trailingComma: 'all',
