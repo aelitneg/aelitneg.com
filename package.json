@@ -10,13 +10,16 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "fmt": "prettier --write ."
+    "fmt": "prettier --write .",
+    "generate-types": "wrangler types"
   },
   "dependencies": {
+    "@astrojs/cloudflare": "^14.1.7",
     "@astrojs/rss": "^4.0.19",
     "astro": "^7.1.5",
     "markdown-it": "^14.1.1",
-    "sanitize-html": "^2.17.3"
+    "sanitize-html": "^2.17.3",
+    "wrangler": "^4.115.0"
   },
   "devDependencies": {
     "@types/markdown-it": "^14.1.2",

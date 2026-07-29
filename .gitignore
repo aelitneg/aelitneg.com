@@ -24,3 +24,6 @@ pnpm-debug.log*
 
 # claude code
 .claude/settings.local.json
+
+# cloudflare
+.wrangler/

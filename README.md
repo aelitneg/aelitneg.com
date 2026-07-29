@@ -1,6 +1,10 @@
 # aelitneg.com
 
-## Accessibility
+## Deployment
+
+This site is publicly hosted on Cloudflare.
+
+## Accessibility
 
 - Use `aria-label` to describe the destination of links.
 - Use `alt` to describe the content of images.
