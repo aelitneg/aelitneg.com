@@ -13,8 +13,8 @@
     "fmt": "prettier --write ."
   },
   "dependencies": {
-    "@astrojs/rss": "^4.0.18",
-    "astro": "^6.2.2",
+    "@astrojs/rss": "^4.0.19",
+    "astro": "^7.1.5",
     "markdown-it": "^14.1.1",
     "sanitize-html": "^2.17.3"
   },
@@ -22,6 +22,7 @@
     "@types/markdown-it": "^14.1.2",
     "@types/node": "^25.6.0",
     "@types/sanitize-html": "^2.16.1",
-    "prettier": "^3.8.1"
+    "prettier": "^3.8.1",
+    "prettier-plugin-astro": "^0.14.1"
   }
 }

@@ -13,18 +13,23 @@ const posts = await getCollection('blog');
     <div class="hero">
       <Image class="hero-image" src={andrew} alt="andrew" />
       <div class="hero-text">
-        <h1>Engineering for Creators</h1>
+        <h1>Andrew Gentile</h1>
         <p>
-          I'm a software engineer building tools for people working in music,
-          tech, and creative spaces. I work across audio, web, and infrastructure
-          to solve technical problems and improve the way creative work gets done.
+          Hello! I am a human and that means I make things. This space is where
+          I share what I've learned — what worked and what fell apart, in the
+          hope that others may find it interesting. I build audio, web, and
+          infrastructure tools that help people create and share music.
         </p>
       </div>
     </div>
-    {posts.length > 0 && (
-      <h2>blog</h2> 
-      <PostList />
-    )}
+    {
+      posts.length > 0 && (
+        <>
+          <h2>blog</h2>
+          <PostList />
+        </>
+      )
+    }
   </div>
 </BaseLayout>
 
@@ -38,7 +43,7 @@ const posts = await getCollection('blog');
     display: flex;
     align-items: center;
     gap: 2rem;
-    margin-bottom: 2rem;
+    margin: 4rem 0 2rem 0;
   }
 
   .hero-image {
